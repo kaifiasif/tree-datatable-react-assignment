@@ -61,7 +61,7 @@ const TableView = () => {
       footerValueGetter: params => {
         const isRootLevel = params.node.level === -1
         if (isRootLevel) {
-          return 'Grad Total'
+          return 'Grand Total'
         }
         return `Total (${params.value})`
       }

@@ -1,6 +1,6 @@
-import TableView from "./pages/TableView";
-import TableViewSecond from "./pages/TableViewSecond";
-import { Routes, Route, Link } from "react-router-dom";
+import TableView from './pages/TableView'
+import TableViewSecond from './pages/TableViewSecond'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <Route path="second-view" element={<TableViewSecond />} />
       </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
