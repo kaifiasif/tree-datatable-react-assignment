@@ -1,0 +1,10 @@
+{
+  "prettier.eslintIntegration": true,
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "eslint.options": {
+    "configFile": "./.eslintrc.js"
+  },
+  "files.autoSave": "afterDelay"
+}
