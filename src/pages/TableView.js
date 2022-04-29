@@ -76,6 +76,7 @@ const TableView = () => {
           defaultColDef={defaultColDef}
           autoGroupColumnDef={autoGroupColumnDef}
           groupIncludeTotalFooter
+          groupDisplayType={'multipleColumns'}
         />
       </div>
     </div>

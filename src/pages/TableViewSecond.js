@@ -9,31 +9,31 @@ const TableViewSecond = () => {
 
   const rowData = [
     {
-      root: 'Root',
+      root: 'root',
       DIR1: 'F1',
       DIR2: 'F11',
       count: 1
     },
     {
-      root: 'Root',
+      root: 'root',
       DIR1: 'F1',
       DIR2: 'F12',
       count: 1
     },
     {
-      root: 'Root',
+      root: 'root',
       DIR1: 'F2',
       DIR2: 'F21',
       count: 1
     },
     {
-      root: 'Root',
+      root: 'root',
       DIR1: 'F2',
       DIR2: 'F22',
       count: 1
     },
     {
-      root: 'Root',
+      root: 'root',
       DIR1: 'F2',
       DIR2: 'F22',
       DIR3: 'F221',
@@ -43,9 +43,27 @@ const TableViewSecond = () => {
 
   const columnDefs = [
     { field: 'root', rowGroup: true, hide: true },
-    { field: 'DIR1', rowGroup: true, hide: true },
-    { field: 'DIR2', rowGroup: true, hide: true },
-    { field: 'DIR3', rowGroup: true, hide: true },
+    { field: 'DIR1', rowGroup: true, hide: true, enableRowGroup: true },
+    {
+      field: 'DIR2',
+      minWidth: 250,
+      rowGroup: true,
+      showRowGroup: true,
+      cellRenderer: 'agGroupCellRenderer',
+      cellRendererParams: {
+        footerValueGetter: MyInnerRenderer
+      },
+      headerName: 'Row Levels',
+      enableRowGroup: true
+    },
+    {
+      field: 'DIR3',
+      minWidth: 250,
+      rowGroup: true,
+      hide: true,
+      showRowGroup: true,
+      enableRowGroup: true
+    },
     { headerName: 'Count of File', field: 'count', aggFunc: 'sum' }
   ]
 
@@ -57,12 +75,10 @@ const TableViewSecond = () => {
       resizable: true
     }
   }, [])
+
   const autoGroupColumnDef = useMemo(() => {
     return {
-      minWidth: 300,
-      cellRendererParams: {
-        innerRenderer: MyInnerRenderer
-      }
+      minWidth: 250
     }
   }, [])
 
@@ -74,8 +90,8 @@ const TableViewSecond = () => {
           rowData={rowData}
           defaultColDef={defaultColDef}
           autoGroupColumnDef={autoGroupColumnDef}
-          groupIncludeFooter
           groupIncludeTotalFooter
+          groupDisplayType={'groupRows'}
         />
       </div>
     </div>

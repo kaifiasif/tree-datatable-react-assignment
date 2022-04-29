@@ -12,7 +12,8 @@ const DataTable = ({
   defaultColDef,
   autoGroupColumnDef,
   groupIncludeFooter,
-  groupIncludeTotalFooter
+  groupIncludeTotalFooter,
+  groupDisplayType
 }) => {
   return (
     <div style={{ width: '100%', height: '100vh' }}>
@@ -29,7 +30,7 @@ const DataTable = ({
           columnDefs={columnDefs}
           autoGroupColumnDef={autoGroupColumnDef}
           rowData={rowData}
-          groupDisplayType={'multipleColumns'}
+          groupDisplayType={groupDisplayType}
           immutableData={true}
           groupIncludeTotalFooter={groupIncludeTotalFooter}
           groupIncludeFooter={groupIncludeFooter}
