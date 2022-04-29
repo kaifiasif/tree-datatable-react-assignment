@@ -4,7 +4,7 @@
 ![Tree-Table-First View ](https://i.ibb.co/y4TXn2q/Screenshot-2022-04-22-at-10-59-06-PM.png)
 
 ## Second View
-![Tree-Table- View ](https://i.ibb.co/CvVm5yq/Screenshot-2022-04-22-at-11-01-25-PM.png)
+![Tree-Table- View ](https://i.ibb.co/S7HLd4D/Second-View.png)
 
 
 ## Live Site
